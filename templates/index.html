@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Prediction</title>
+</head>
+<body>
+    <h2>Upload Face Image</h2>
+
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h3>Predicted Class: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
